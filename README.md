@@ -45,19 +45,8 @@ docker compose up --build -d
 
 Le `-v` supprime le volume MySQL afin que `init.sql` soit rejoué.
 
-## Points du scénario conservés
-
-- formulaire `contact.php` accessible publiquement ;
-- messages stockés dans `messages` ;
-- contenu du champ `message` affiché sans échappement dans `admin.php` pour le XSS stocké ;
-- vraie session PHP avec cookie `PHPSESSID`, volontairement sans `HttpOnly` dans la version vulnérable ;
-- accès admin contrôlé côté serveur par la session et le rôle ;
-- recherche d'utilisateur réservée à l'admin et volontairement vulnérable à la SQLi ;
-- requête SQLi projetant 4 colonnes pour faciliter la démonstration `UNION` demandée par le sujet ;
-- données sensibles fictives dans `users`.
 
 ## Documentation
 
 - `docs/ARCHITECTURE.md`
-- `docs/INSTALLATION.md`
 - `docs/MAXENCE_LIVRABLE.md`
